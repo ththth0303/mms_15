@@ -14,12 +14,12 @@
             @foreach ($positionTeams as $positionTeam)
                 @if($positionTeam->team)
                     <tr>
-                        <td class="hidden teamId">{{ $positionTeam->team->id}}</td>
+                        <td class="hidden teamId">{{ $positionTeam->team->id }}</td>
                         <td class="text-center">{{ $loop->iteration }}</td>
                         <td>{{ $positionTeam->team->name }}</td>
                         <td>
                             @foreach ($positionTeam->positions as $positon)
-                                {{ $positon->name .' | ' }}
+                                {{ $positon->name . ' | ' }}
                             @endforeach
                         </td>
                         <td>

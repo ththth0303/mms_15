@@ -38,12 +38,12 @@
                     </td>
                     <td>
                         <div class="col-md-6">
-                            <a href ="{{ action('Admin\UserController@edit', $member->id ) }}" class="btn btn-primary"><i class="fa fa-pencil-square-o"></i></a>
+                            <a href ="{{ action('Admin\UserController@edit', $member->id ) }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit member"><i class="fa fa-pencil-square-o"></i></a>
                         </div>
                         <div class="col-md-6">
                             {{ Form::open(['action' => 'Admin\UserController@destroy', 'class' => 'delete-form-user']) }}
                                 {{ Form::hidden('userId',$member->id) }}
-                                {!! Form::button(trans('admin.lbl-delete'), ['class' => 'btn btn-primary btn-delete', 'type' => 'button']) !!}
+                                {!! Form::button(trans('admin.lbl-delete'), ['class' => 'btn btn-primary btn-delete', 'type' => 'button', 'data-toggle' => 'tooltip', 'title' => 'Delete member']) !!}
                             {{ Form::close() }}
                         </div>
                     </td>

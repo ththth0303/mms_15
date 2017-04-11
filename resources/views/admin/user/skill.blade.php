@@ -17,10 +17,14 @@
                 <div class="col-md-6">
                     {{ Form::textarea('exeper', isset($userSkill->experiensive) ? $userSkill->experiensive : null, ['class' => 'form-control exeper']) }}
                 </div>
+
+                <span class="help-block has-error">
+                    <strong class="err-exeper"></strong>
+                </span>
             </div>
             <div class="row">
                 <div class="col-md-3 col-md-offset-8">
-                    {{ Form::button($flag ? trans('admin.btn-add') : trans('admin.btn-edit'), ['class' => 'btn btn-primary', 'id' => 'btn-add-skill']) }}
+                    {{ Form::button($flag ? trans('admin.btn-add') : trans('admin.btn-edit'), ['class' => 'btn btn-primary', 'id' => $flag ? 'btn-add-skill' : 'btn-edit-skill']) }}
                 </div>
             </div>
         {{ Form::close() }}
